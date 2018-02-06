@@ -45,7 +45,7 @@ function realLink() {
             const newModPath = path.relative(process.cwd(), path.join(modulesPath, modName));
             const existingPath =
                   isWindows
-                  ? path.resolve(process.cwd(), deps[modName]);
+                  ? path.resolve(process.cwd(), deps[modName])
                   : path.relative(process.cwd(), deps[modName]);
             if (!fs.existsSync(newModPath)) {
                 if (fs.existsSync(existingPath)) {
